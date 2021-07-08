@@ -1,0 +1,29 @@
+.o_thread_edit,
+.o_thread_del,
+{
+    cursor: pointer;
+
+}
+
+.o_thread_del{
+     margin-left: 1px!important;
+}
+
+.o_thread_edit>i {
+    color: rgba(64, 128, 247, 0.5) !important;
+}
+
+.o_thread_edit>i:hover {
+    color: rgba(64, 128, 247, 1) !important;
+
+}
+
+
+.o_thread_del>i {
+    color: rgba(255, 0, 0, 0.5) !important;
+}
+
+.o_thread_del>i:hover {
+    color: rgba(255, 0, 0, 1) !important;
+
+}

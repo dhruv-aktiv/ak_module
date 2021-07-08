@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_message_editable_user,access.message.editable.user,mail.model_mail_message,message_note_edit.group_msg_edit,0,1,0,0
+access_message_deletable_user,access.message.deletable.user,mail.model_mail_message,message_note_edit.group_msg_del,0,0,0,1

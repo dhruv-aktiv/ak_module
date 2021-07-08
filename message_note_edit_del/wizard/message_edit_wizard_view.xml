@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="message_note_edit_wizard_form_view" model="ir.ui.view">
+            <field name="name">message.note.edit.form.view</field>
+            <field name="model">message.note.edit</field>
+            <field name="arch" type="xml">
+                <form string="Message/Note Edit">
+                    <sheet>
+                        <group>
+                            <field name="author_id"/>
+                            <field name="email_from"/>
+                            <field name="message_id"/>
+                            <field name="date"/>
+                            <field name="related_document_model"/>
+                            <field name="related_document_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Message">
+                                <field name="body" options="{'style-inline': true}"/>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="message_note_edit_action" model="ir.actions.act_window">
+            <field name="name">Edit Message/Note</field>
+            <field name="res_model">message.note.edit</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="message_note_edit_wizard_form_view" />
+        </record>
+    </data>
+</odoo>

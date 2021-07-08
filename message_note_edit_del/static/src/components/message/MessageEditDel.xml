@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+	<t t-inherit="mail.Message" t-inherit-mode="extension" t-name="MessageEditDel">
+		<xpath expr="//div[hasclass('o_Message_header')]" position="inside">
+			<span class="o_thread_edit" t-att-data-message-local-id="message and message.localId" t-if="message.message_type !== 'notification'  and !message.is_discussion " t-on-click="_onClickEditMsg" title="Edit Message">
+				<i t-att-class="'fa fa-pencil-square-o'"/>
+			</span>
+			<span class="o_thread_del" t-att-data-message-local-id="message and message.localId" t-if="message.message_type !== 'notification' and !message.is_discussion and message.author.im_status " t-on-click="_onClickDelMsg" title="Delete Message">
+				<i t-att-class="'fa fa-trash-o'"/>
+			</span>
+			<button t-on-click="">
+				Click Here!!!
+			</button>
+		</xpath>
+	</t>
+	<t owl="1" t-name="MessageReg">
+		<MessageEditDel/>
+	</t>
+</templates>
